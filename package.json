@@ -15,7 +15,7 @@
     "url": "https://github.com/themaanas/wifiLamp/issues"
   },
   "dependencies": {
-    "rpio": "latest",
-    "express": "latest"
+    "rpio": "",
+    "express": ""
   }
 }
