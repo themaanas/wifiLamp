@@ -1,0 +1,21 @@
+{
+  "name": "wifiLamp",
+  "version": "1.0",
+  "description": "Make a desk lamp WiFi enabled.",
+  "scripts": {
+    "start": "sudo forever start server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maddox/dasher"
+  },
+  "author": "Maanas Manoj <themaanas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maddox/dasher/issues"
+  },
+  "dependencies": {
+    "node-dash-button": "^0.6.1",
+    "express": "^4.0"
+  }
+}
