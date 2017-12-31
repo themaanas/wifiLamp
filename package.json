@@ -7,15 +7,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maddox/dasher"
+    "url": "https://github.com/themaanas/wifiLamp"
   },
   "author": "Maanas Manoj <themaanas@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maddox/dasher/issues"
+    "url": "https://github.com/themaanas/wifiLamp/issues"
   },
   "dependencies": {
-    "node-dash-button": "^0.6.1",
-    "express": "^4.0"
+    "rpio": "latest",
+    "express": "latest"
   }
 }
