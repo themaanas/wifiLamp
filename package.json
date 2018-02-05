@@ -1,6 +1,5 @@
 {
   "name": "wifiLamp",
-  "version": "1.0",
   "description": "Make a desk lamp WiFi enabled.",
   "scripts": {
     "start": "sudo forever start server.js"
