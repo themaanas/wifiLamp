@@ -1,23 +1,23 @@
 var express = require('express');
-var gpio = require("rpio");
+var gpio = require('rpio');
 var app = express();
-var gpioPin = 7;
+var gpioPin = 7; //pin that the lamp is connected to
 gpio.open(gpioPin, gpio.OUTPUT, gpio.LOW);
-app.get('/status/', function(req, res){
+app.get('/status/', function(req, res){ //returns status of lamp
         res.send((gpio.read(gpioPin) ? 'on':'off'));
         console.log('status');
 });
-app.get('/on/', function(req, res){
+app.get('/on/', function(req, res){ //turns lamp on
         gpio.write(gpioPin, gpio.HIGH);
         console.log('on');
         res.send('1');
 });
-app.get('/off/', function(req, res){
+app.get('/off/', function(req, res){ //turns lamp off
         gpio.write(gpioPin, gpio.LOW);
         console.log('off');
         res.send('0');
 });
-app.get('/toggle/', function(req, res){
+app.get('/toggle/', function(req, res){ //receives get request to toggle
         if (gpio.read(gpioPin, gpio.INPUT) == 1){
                 gpio.write(gpioPin, gpio.LOW);
                 console.log('off');
@@ -28,7 +28,7 @@ app.get('/toggle/', function(req, res){
                 res.send('1');
         }
 });
-app.post('/toggle/', function(req, res){
+app.post('/toggle/', function(req, res){ //receives post request to toggle
         if (gpio.read(gpioPin, gpio.INPUT) == 1){
                 gpio.write(gpioPin, gpio.LOW);
                 console.log('off');
